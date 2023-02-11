@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+@very-dark-blue: hsl(234, 12%, 34%);
+@grayish-blue: hsl(229, 6%, 66%);
+@very-light-gray: hsl(0, 0%, 98%);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+  text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none; 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 330px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+  padding-block-end: 2.5rem;
+}
+
+.hero-content {
+  margin-top: 1.6rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: 200;
+  font-size: 2.4rem;
+  color: @very-dark-blue;
+}
+
+h1 {
+  color: @very-dark-blue;
+  line-height: 1.2;
+  font-size: 2.4rem;
+}
+
+.hero-text {
+  margin-top: 2rem;
+  color: @grayish-blue;
+}
+
+.card-container {
+  margin-top: 7.5rem;
+}
+
+.card {
+  height: 220px;
+  margin-block-end: 2.5rem;
+  padding: 2rem;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 24px 32px -15px hsla(234, 12%, 34%, 0.4);
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color);
+  }
+  
+  &-title {
+    color: @very-dark-blue;
+    font-size: 2rem;
+  }
+  
+  &-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: @grayish-blue;
+    margin-top: 1rem;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-top: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  main {
+    max-width: 960px;
+    padding: 0;
+  }
+  
+  .hero-text {
+    max-width: 50ch;
+    text-align: center;
+    margin: 0 auto;
+    margin-block-start: 3rem;
+  }
+  
+  .card-container {
+    display: grid;
+    align-items: center;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
